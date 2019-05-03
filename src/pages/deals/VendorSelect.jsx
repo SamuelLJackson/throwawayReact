@@ -21,6 +21,7 @@ class VendorSelect extends Component {
             selectState,
             selectVendor,
             toggleShowExpiredDeals,
+            showDemandDataIfNeeded,
         } = this.props
         
         return (
@@ -39,7 +40,7 @@ class VendorSelect extends Component {
                 />
                 <input type="checkbox" name="showExpiredDeals" value={showExpiredDeals} onChange={toggleShowExpiredDeals} className='checkbox'></input>
                 <p className='checkbox'>Show Expired Deals</p>
-                <p className='applyFiltersButton'>Apply Filters</p>
+                <div className='applyFiltersButton' onClick={showDemandDataIfNeeded}>Apply Filters</div>
             </div>
         )
     }
@@ -66,6 +67,8 @@ const mapDispatchToProps = dispatch => ({
     selectVendor: vendor => dispatch(ACTIONS.selectVendor(vendor)),
     fetchStatesAndVendors: () => dispatch(ACTIONS.fetchStatesAndVendors()),
     toggleShowExpiredDeals: () => dispatch(ACTIONS.toggleShowExpiredDeals()),
+    showDemandDataIfNeeded: () => dispatch(ACTIONS.showDemandDataIfNeeded()),
+    
 })
 
 export default connect(

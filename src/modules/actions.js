@@ -48,18 +48,13 @@ const toggleShowExpiredDeals = () => ({
     payload: null,
 })
 
-const showDemandData = () => ({
-    type: Types.SHOW_DEMAND_DATA,
-    payload:null,
-})
-
 const updateSelectedMainView = (selection) => ({
     type: Types.UPDATE_SELECTED_MAIN_VIEW,
     payload: selection,
 })
 
 const toggleShowDemandData = (showDemandData) => ({
-    type: Types.SHOW_DEMAND_DATA,
+    type: Types.TOGGLE_SHOW_DEMAND_DATA,
     payload: showDemandData,
 })
 
@@ -90,10 +85,8 @@ export default {
     selectVendor,
     fetchStatesAndVendors,
     toggleShowExpiredDeals,
-    showDemandData,
     hideDemandData,
     updateSelectedMainView,
-    toggleShowDemandData,
     showDemandDataIfNeeded,
     Types,
 }

@@ -27,6 +27,7 @@ const dealsReducer = (state = defaultState, action) => {
                 return { value: vendor.tradingPartnerKey, label: vendor.tradingPartnerName }
             })
             newState.selectedVendor = null
+            newState.showDemandData = false
             return newState
         }
 
