@@ -1,15 +1,15 @@
-.selectControl,
-.selectControl-states,
-.selectControl-vendors {
+.selectControl {
     float: left;
     margin-right: 10px;
-}
-    .selectControl-states {
+    &-states {
+        @inherit: .selectControl;
         width: 200px;
     }
-    .selectControl-vendors {
+    &-vendors {
+        @inherit: .selectControl;
         width: 400px;
     }
+}
 
 .checkbox {
     float: left;
@@ -41,13 +41,13 @@
     margin-right: 20px;
 }
 
-.navigationButton,
-.selectedNavigationButton {
+.navigationButton {
     margin-right: 20px;
     cursor: pointer;
     color: lightgray;
 }
 
 .selectedNavigationButton {
+    @inherit: .navigationButton;
     color: gray;
 }
